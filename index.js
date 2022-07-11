@@ -1,4 +1,4 @@
-//stores data in array
+//stores actions in array
 const ACTIONS = {
     START: 'start',
     STOP: 'stop',
@@ -6,6 +6,7 @@ const ACTIONS = {
     // ACTION: 'action',
 };
 
+//data stored in array
 records = [
     {
         user_id: 1,
@@ -74,7 +75,7 @@ function getPlayBackTime(userId, records) {
     let deviceArray = [];
     let startTime = 0;
 
-    //get only actions from this user
+    //get actions only from this user
     const usersActions = records.filter(record => record.user_id === userId);
 
     //keeps track of what devices are being played at any point
@@ -106,8 +107,6 @@ console.log(getPlayBackTime(1, records))
 console.log(getUsers(records, "start", 700, 900))
 //==> [ 3 ]
 
-function sum(a, b) {
-    return a + b;
-  }
+
 module.exports = getPlayBackTime;
 module.exports = getUsers;
