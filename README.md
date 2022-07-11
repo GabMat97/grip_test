@@ -8,7 +8,7 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/GabMat97/grip.git
+  git clone https://github.com/GabMat97/grip_test.git
 ```
 
 
