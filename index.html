@@ -26,7 +26,7 @@
   .right {
     right: 0;
     background-color: rgb(248, 248, 248);
-
+    /* background-color: red; */
   }
 
   .tag_text {
@@ -36,9 +36,17 @@
     bottom: 0;
   }
 
+  .left_hint {
+    text-align: left;
+  }
+
+  .right_hint {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
   .hint_text {
     color: grey;
-    text-align: left;
   }
 
   .login_button {
@@ -61,10 +69,20 @@
     text-align: center;
   }
 
+  .laptop_img {
+    width: 50%;
+    max-width: 75%;
+    height: auto;
+  }
+
+  .full_width {
+    width:100%;
+  }
+
   .headline {
     color: black;
     font-size: 25px;
-    text-align: justify;
+    text-align: center;
   }
 
   .centered img {
@@ -74,24 +92,22 @@
   </style>
   <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
 </head>
-<body>
-
+<body class="rightBorder">
 <div class="split left">
   <div class="centered">
     <img src="./public/GRIP.png" alt="GRIP VIRTUAL">
-    <p class="hint_text">Welcome to Grip Virtual. Please log in below to get started.</p>
+    <p class="hint_text left_hint">Welcome to Grip Virtual. Please log in below to get started.</p>
     <button class="login_button">Login <i style="float: right;">><i></button>
   </div>
 </div>
-
 <div class="split right">
-  <div class="centered">
-    <img src="./public/laptop-grip.png" alt="Avatar man">
+  <div class="full_width centered">
+    <img src="./public/laptop-grip.png" class="laptop_img" alt="Avatar man">
     <h2 class="headline" >Take the work out of networking. Meet the right people for your buiness needs with out intelligent matchmaking technology</h2>
-    <p class="hint_text">Log in - 70% of those who did say they made a connection they would not have made otherwise</p>
+    <p class="hint_text right_hint">Log in - 70% of those who did say they made a connection they would not have made otherwise</p>
   </div>
   <p class="tag_text" >Event Matchmaking Software by Grip&nbsp;&nbsp;</p>
 </div>
-     
+
 </body>
 </html> 

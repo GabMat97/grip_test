@@ -2,56 +2,7 @@
 const ACTIONS = {
     START: 'start',
     STOP: 'stop',
-    // PAUSE: 'pause',
-    // ACTION: 'action',
 };
-
-//data stored in array
-records = [
-    {
-        user_id: 1,
-        device: "Windows 10",
-        action: "start",
-        date_actioned: 100,
-    },
-    {
-        user_id: 2,
-        device: "OSX 15.4",
-        action: "start",
-        date_actioned: 200,
-    },
-    {
-        user_id: 1,
-        device: "iPhone 8s",
-        action: "start",
-        date_actioned: 250,
-    },
-    {
-        user_id: 1,
-        device: "Windows 10",
-        action: "stop",
-        date_actioned: 370,
-    },
-    {
-        user_id: 1,
-        device: "iPhone 8s",
-        action: "stop",
-        date_actioned: 410,
-    },
-    {
-        user_id: 2,
-        device: "OSX 15.4",
-        action: "stop",
-        date_actioned: 490,
-    },
-    {
-        user_id: 3,
-        device: "Android 9.1",
-        action: "start",
-        date_actioned: 700,
-    }
-]
-
 
 //removes potential injection code 
 function sanitizeString(str) {
@@ -59,7 +10,7 @@ function sanitizeString(str) {
     return str.trim();
 }
 
-//consider renaming to searchForActionWithinTime
+    //consider renaming to searchForActionWithinTime
 function getUsers(records, action, start, end) {
     //get matches according to criteria
     const matches = records.filter(record => {
@@ -67,7 +18,7 @@ function getUsers(records, action, start, end) {
     });
     //return array of matching userIds
     return matches.map(match => match.user_id);
-}
+};
 
 //consider renaming to getUniquePlayBackTime
 function getPlayBackTime(userId, records) {
@@ -100,13 +51,12 @@ function getPlayBackTime(userId, records) {
     });
 
     return uniqueTime;
-}
-console.log(getPlayBackTime(1, records))
-// getPlayBackTime(1, records);
-//==> 310
-console.log(getUsers(records, "start", 700, 900))
-//==> [ 3 ]
+};
 
+// console.log(getPlayBackTime(1, records))
+// console.log(getUsers(records, "start", 700, 900))
 
-module.exports = getPlayBackTime;
-module.exports = getUsers;
+module.exports = { 
+    getPlayBackTime,
+    getUsers
+};
