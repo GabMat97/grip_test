@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    font-family: Arial;
+    color: white;
+  }
+
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  .left {
+    left: 0;
+    background-color: white;
+  }
+
+  .right {
+    right: 0;
+    background-color: rgb(248, 248, 248);
+
+  }
+
+  .tag_text {
+    color: black;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+
+  .hint_text {
+    color: grey;
+    text-align: left;
+  }
+
+  .login_button {
+    background-color: rgb(253, 104, 17);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 10px;
+    text-align: left;
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 6px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .headline {
+    color: black;
+    font-size: 25px;
+    text-align: justify;
+  }
+
+  .centered img {
+    width: 100%;
+    /* border-radius: 50%; */
+  }
+  </style>
+  <link rel="icon" type="image/x-icon" href="./public/favicon.ico">
+</head>
+<body>
+
+<div class="split left">
+  <div class="centered">
+    <img src="./public/GRIP.png" alt="GRIP VIRTUAL">
+    <p class="hint_text">Welcome to Grip Virtual. Please log in below to get started.</p>
+    <button class="login_button">Login <i style="float: right;">><i></button>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <img src="./public/laptop-grip.png" alt="Avatar man">
+    <h2 class="headline" >Take the work out of networking. Meet the right people for your buiness needs with out intelligent matchmaking technology</h2>
+    <p class="hint_text">Log in - 70% of those who did say they made a connection they would not have made otherwise</p>
+  </div>
+  <p class="tag_text" >Event Matchmaking Software by Grip&nbsp;&nbsp;</p>
+</div>
+     
+</body>
+</html> 
